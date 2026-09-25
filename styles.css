@@ -2,8 +2,8 @@
     box-sizing: border-box, so padding doesn’t make the boxes wider
     body margin: 0, so that the browser’s default gap goes away
     img max-width: 100%, so images cant stick out for phones
-f   ont: inherit on form controls, so instead of using the browsers font, they use mine.
-   Omitted: list styles and focus outlines are kept for meaning and accessibility. */
+    font: inherit on form controls, so instead of using the browsers font, they use mine.
+    Omitted: list styles and focus outlines are kept for meaning and accessibility. */
 *, *::before, *::after { box-sizing: border-box; }
 body { margin: 0; }
 img { max-width: 100%; }
