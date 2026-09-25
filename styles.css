@@ -51,6 +51,7 @@ input, select, button { font: inherit; }
 body { font-family: var(--font-body); line-height: 1.6; color: var(--color-text); background: var(--color-bg); }
 main { max-width: var(--max-width); margin: auto; padding: var(--space); }
 p, li { max-width: var(--measure); }
+table { display: block; overflow-x: auto; }
 h1, h2 { font-family: var(--font-display); }
 h1 { font-size: var(--text-h1); }
 h2 { font-size: var(--text-h2); }
