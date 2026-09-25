@@ -3,17 +3,20 @@ body { margin: 0; }
 img { max-width: 100%; }
 input, select, button { font: inherit; }
 
+/* fonts: Lato and Bitter from Google Fonts, SIL Open Font License.
+   fallbacks: Arial (body), Georgia (display). */
+
 /* tokens */
 :root {
   --color-bg: #ffffff;
   --color-surface: #f2f2f2;
   --color-text: #222222;
-  --color-border: #968d8d;
-  --color-action: #150cc7;
+  --color-border: #888888;
+  --color-action: #0055cc;
   --color-action-hover: #003d99;
-  --color-action-active: #054379;
+  --color-action-active: #002b6b;
   --color-on-action: #ffffff;
-  --color-focus: #be4106;
+  --color-focus: #b34700;
   --space: 1rem;
   --max-width: 700px;
   --measure: 65ch;
@@ -26,6 +29,14 @@ input, select, button { font: inherit; }
   --text-h2: 1.3rem;
 }
 
+@media (min-width: 700px) {
+  :root { --text-h1: 2.5rem; --text-h2: 1.5rem; }
+}
+
 /* base */
 body { font-family: var(--font-body); line-height: 1.6; color: var(--color-text); background: var(--color-bg); }
 main { max-width: var(--max-width); margin: auto; padding: var(--space); }
+p, li { max-width: var(--measure); }
+h1, h2 { font-family: var(--font-display); }
+h1 { font-size: var(--text-h1); }
+h2 { font-size: var(--text-h2); }
