@@ -6,7 +6,7 @@ input, select, button { font: inherit; }
 /* Fonts: Lato and Bitter from Google Fonts, SIL Open Font License.
    Fallbacks: Arial (body), Georgia (display). */
 
-/* tokens */
+/* Tokens */
 :root {
   --color-bg: #ffffff;
   --color-surface: #f2f2f2;
@@ -33,7 +33,7 @@ input, select, button { font: inherit; }
   :root { --text-h1: 2.5rem; --text-h2: 1.5rem; }
 }
 
-/* base */
+/* Base */
 body { font-family: var(--font-body); line-height: 1.6; color: var(--color-text); background: var(--color-bg); }
 main { max-width: var(--max-width); margin: auto; padding: var(--space); }
 p, li { max-width: var(--measure); }
