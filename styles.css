@@ -1,12 +1,19 @@
+/* S1: Reset
+    box-sizing: border-box, so padding doesn’t make the boxes wider
+    body margin: 0, so that the browser’s default gap goes away
+    img max-width: 100%, so images cant stick out for phones
+f   ont: inherit on form controls, so instead of using the browsers font, they use mine.
+   Omitted: list styles and focus outlines are kept for meaning and accessibility. */
 *, *::before, *::after { box-sizing: border-box; }
 body { margin: 0; }
 img { max-width: 100%; }
 input, select, button { font: inherit; }
 
-/* Fonts: Lato and Bitter from Google Fonts, SIL Open Font License.
+/* S3: Typography
+   Fonts: Lato and Bitter from Google Fonts, SIL Open Font License.
    Fallbacks: Arial (body), Georgia (display). */
 
-/* Tokens */
+/* S2: Tokens */
 :root {
   --color-bg: #ffffff;
   --color-surface: #f2f2f2;
@@ -58,8 +65,13 @@ h2 { font-size: var(--text-h2); }
 a { color: var(--color-action); }
 a:hover { color: var(--color-action-hover); }
 a:active { color: var(--color-action-active); }
+/* S6: Controls
+   To show a focus outline, every control has a label. */
 :focus-visible { outline: 2px solid var(--color-focus); }
 
+/* S4: Buttons
+   Primary for the main action, secondary for alternatives.
+   Disabled marks unavailable options. All states use action tokens. */
 .btn { padding: 0.6rem 1.2rem; border: 2px solid var(--color-action); border-radius: var(--radius); background: var(--color-action); color: var(--color-on-action); }
 .btn:hover { background: var(--color-action-hover); }
 .btn:active { background: var(--color-action-active); }
@@ -67,6 +79,9 @@ a:active { color: var(--color-action-active); }
 .secondary:hover { background: var(--color-surface); }
 .btn:disabled { background: var(--color-surface); border-color: var(--color-border); color: var(--color-border); }
 
+/* S5: Surfaces
+   .card groups content, .raised draws more attention,
+   .notice is for time-sensitive info, .media reserves space for images. */
 .card, .notice, .media { margin-top: var(--space); padding: var(--space); border-radius: var(--radius); background: var(--color-surface); }
 .card { box-shadow: var(--elevation-1); }
 .raised { box-shadow: var(--elevation-2); }
